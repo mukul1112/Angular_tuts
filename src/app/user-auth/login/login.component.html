@@ -1,0 +1,35 @@
+<p class="component">login works!</p>
+<input type="text" placeholder="value for display" #box>
+<button (click)="getvalue(box.value)">Get</button>
+<p>{{displayval}}</p>
+
+<button (click)="counter('add')">++</button>
+<p>count:- {{count}}</p>
+<button (click)="counter('sub')">--</button>
+
+<form #basicForm="ngForm" (ngSubmit)="getdata(basicForm.value)">
+ <input type="text" ngModel name="username" placeholder="username" >
+ <input type="text" ngModel name="email" placeholder="email">
+ <input type="text"  ngModel name="number" placeholder="number">
+ <button>Register</button>
+</form>
+
+<p>{{data.username}}</p>
+
+<ul [style.color]="color" *ngFor="let item of userdata">
+    <li> Name: {{item.name}}</li>
+    <li> email: {{item.name}}</li>
+    <ul *ngFor="let accounts of item.socialAccounts"> 
+            <li>socialAccounts: {{accounts}}</li>
+    </ul>
+</ul>
+
+<button (click)="toggle()">toggle</button>
+
+ <h1 *ngIf="command">heading</h1>
+
+ <h1>
+    passing child to parent</h1> 
+    <input type="text" #ud/>
+    <button (click)="emitdata(ud.value)">update value</button>
+  

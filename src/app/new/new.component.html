@@ -1,0 +1,20 @@
+<p class="custom">new works!</p>
+<h2>{{name}}</h2>
+
+<h2>To do List</h2>
+<input type="text" name="task" placeholder="Enter the task" #task>
+<button (click)="getTask(task.value)">save task</button>
+
+<ul *ngFor="let item of usertask">
+  <li>{{item.name}} <button (click)="remove(item.id)">remove</button></li>
+
+</ul>
+<h1>imported from parent</h1>
+<ul *ngFor="let user of item">
+    <li>
+       {{user.name}} 
+    </li>
+    <li>
+        {{user.email}} 
+     </li>
+</ul>
