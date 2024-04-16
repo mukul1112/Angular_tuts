@@ -1,9 +1,11 @@
 import { Routes } from '@angular/router';
-import { AuthComponent } from './auth/auth.component';
+
+import { HotelsComponent } from './hotels/hotels.component';
 
 export const routes: Routes = [
+  
     {
-        path:'auth',
-        component: AuthComponent
+        path:'hotel',
+        component:HotelsComponent
     }
 ];
